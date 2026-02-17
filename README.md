@@ -3,6 +3,10 @@
 A public, customizable static website template for a romantic birthday or anniversary page.
 It includes a cinematic hero, timeline story cards, embedded media, and a small surprise game section.
 
+## Demo
+
+- https://mischar.github.io/birthday-celebration/
+
 ## Features
 
 - Responsive single-page layout (`index.html`, `styles.css`, `script.js`)
