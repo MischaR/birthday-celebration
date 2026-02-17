@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Romantic Story Website Template</title>
+    <meta name="description" content="A public, customizable romantic story website template with timeline moments, media embeds, and a surprise card game.">
+    <meta property="og:title" content="Romantic Story Website Template">
+    <meta property="og:description" content="Create a personalized love-story page with a clean timeline layout and interactive sections.">
+    <meta property="og:image" content="https://picsum.photos/seed/romantic-cover/1200/630">
+    <meta property="og:type" content="website">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap&font-display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css?v=3">
+    <link rel="preload" href="https://picsum.photos/seed/romantic-1/1200/800" as="image">
+    <script src="https://cdn.jsdelivr.net/npm/@twemoji/api@latest/dist/twemoji.min.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <canvas id="fireworksCanvas"></canvas>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1 class="fade-in">Happy Birthday,<br>my love ❤️</h1>
+            <p class="subtitle fade-in delay-1">A little story made just for you</p>
+            <div class="scroll-indicator fade-in delay-2" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 5v14M19 12l-7 7-7-7" />
+                </svg>
+                <span>Scroll</span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="video-section scroll-reveal">
+            <div class="container">
+                <h2>A Message for You</h2>
+                <div class="video-wrapper">
+                    <div class="video-loading" id="youtube-loading" aria-hidden="true">
+                        <div class="video-loading-spinner"></div>
+                        <span>Loading video...</span>
+                    </div>
+                    <iframe
+                        width="560"
+                        height="315"
+                        src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?si=template"
+                        title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+
+        <section class="intro-section scroll-reveal" style="text-align: center; padding: 4rem 2rem 2rem;">
+            <div class="container">
+                <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem;">Our Story</h2>
+                <p style="max-width: 800px; margin: 0 auto; line-height: 1.6; font-size: 1.1rem;">
+                    Once upon a rainy evening, two strangers reached for the same umbrella at a busy station.
+                    They laughed, shared hot chocolate, and promised to meet again.
+                    Since then, every season has added a new chapter: small adventures, quiet support,
+                    and the kind of love that grows stronger in ordinary days.
+                </p>
+            </div>
+        </section>
+
+        <section class="timeline-section">
+            <div class="timeline">
+                <div class="timeline-item scroll-reveal">
+                    <div class="timeline-content">
+                        <div class="timeline-image">
+                            <img src="https://picsum.photos/seed/romantic-1/1200/800" alt="Two people meeting on a rainy evening" width="800" height="600" loading="eager" decoding="async" fetchpriority="high" onerror="this.onerror=null; this.src='https://picsum.photos/800/600';">
+                        </div>
+                        <div class="timeline-text">
+                            <span class="date">Chapter 1</span>
+                            <h3>The Umbrella Moment ☔</h3>
+                            <p>On a stormy night, they met by chance and walked home talking for hours. It felt like they had known each other forever.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item scroll-reveal reverse">
+                    <div class="timeline-content">
+                        <div class="timeline-image">
+                            <img src="https://picsum.photos/seed/romantic-2/1200/800" alt="Cozy coffee date" width="800" height="600" loading="lazy" decoding="async" fetchpriority="low" onerror="this.onerror=null; this.src='https://picsum.photos/800/600';">
+                        </div>
+                        <div class="timeline-text">
+                            <span class="date">Chapter 2</span>
+                            <h3>Coffee and Promises ☕</h3>
+                            <p>What started as one coffee date turned into weekend rituals, long talks, and a promise to keep choosing each other.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item scroll-reveal">
+                    <div class="timeline-content">
+                        <div class="timeline-image">
+                            <img src="https://picsum.photos/seed/romantic-3/1200/800" alt="Road trip at sunset" width="800" height="600" loading="lazy" decoding="async" fetchpriority="low" onerror="this.onerror=null; this.src='https://picsum.photos/800/600';">
+                        </div>
+                        <div class="timeline-text">
+                            <span class="date">Chapter 3</span>
+                            <h3>First Road Trip 🚗</h3>
+                            <p>They got lost more than once, laughed even more, and discovered that the best destination was simply being together.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item scroll-reveal reverse">
+                    <div class="timeline-content">
+                        <div class="timeline-image">
+                            <img src="https://picsum.photos/seed/romantic-4/1200/800" alt="Couple watching fireworks" width="800" height="600" loading="lazy" decoding="async" fetchpriority="low" onerror="this.onerror=null; this.src='https://picsum.photos/800/600';">
+                        </div>
+                        <div class="timeline-text">
+                            <span class="date">Chapter 4</span>
+                            <h3>New Year Under Lights 🎆</h3>
+                            <p>At midnight, with fireworks above them, they made a simple wish: build a life full of kindness, laughter, and courage.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item scroll-reveal">
+                    <div class="timeline-content">
+                        <div class="timeline-image">
+                            <img src="https://picsum.photos/seed/romantic-5/1200/800" alt="Two people cooking at home" width="800" height="600" loading="lazy" decoding="async" fetchpriority="low" onerror="this.onerror=null; this.src='https://picsum.photos/800/600';">
+                        </div>
+                        <div class="timeline-text">
+                            <span class="date">Chapter 5</span>
+                            <h3>Little Everyday Joys 🍳</h3>
+                            <p>From burnt pancakes to perfect Sunday mornings, they learned that love is often hidden in the smallest moments.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item scroll-reveal reverse">
+                    <div class="timeline-content">
+                        <div class="timeline-image">
+                            <img src="https://picsum.photos/seed/romantic-6/1200/800" alt="Future journey together" width="800" height="600" loading="lazy" decoding="async" fetchpriority="low" onerror="this.onerror=null; this.src='https://picsum.photos/800/600';">
+                        </div>
+                        <div class="timeline-text">
+                            <span class="date">Chapter 6</span>
+                            <h3>To Be Continued ✨</h3>
+                            <p>Their story is still being written, one thoughtful day at a time, and every new page begins with love.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="love-note-section scroll-reveal">
+            <div class="video-container">
+                <div class="video-loading" id="love-video-loading" aria-hidden="true">
+                    <div class="video-loading-spinner"></div>
+                    <span>Loading video...</span>
+                </div>
+                <video controls autoplay loop muted playsinline preload="metadata">
+                    <source src="https://samplelib.com/lib/preview/mp4/sample-10s.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="love-message">
+                <h2>A Note From My Heart ❤️</h2>
+                <p>
+                    Thank you for being my calm in chaos and my joy in quiet moments.
+                    I admire your kindness, your strength, and your laugh.
+                    Every day with you feels like home.
+                </p>
+                <p class="signature">Always yours,<br>Your Person</p>
+            </div>
+        </section>
+
+        <section class="present-section scroll-reveal">
+            <h2>One Last Surprise... 🎁</h2>
+            <p class="game-instruction">What do you need for the next chapter?</p>
+
+            <div class="game-container">
+                <div class="card" data-type="wrong" onclick="handleCardClick(this)">
+                    <div class="card-content">
+                        <span class="emoji">📚</span>
+                        <h3>Guidebook</h3>
+                    </div>
+                </div>
+                <div class="card" data-type="wrong" onclick="handleCardClick(this)">
+                    <div class="card-content">
+                        <span class="emoji">🧥</span>
+                        <h3>Jacket</h3>
+                    </div>
+                </div>
+                <div class="card" data-type="wrong" onclick="handleCardClick(this)">
+                    <div class="card-content">
+                        <span class="emoji">🧳</span>
+                        <h3>Luggage</h3>
+                    </div>
+                </div>
+                <div class="card" data-type="wrong" onclick="handleCardClick(this)">
+                    <div class="card-content">
+                        <span class="emoji">📷</span>
+                        <h3>Camera</h3>
+                    </div>
+                </div>
+                <div class="card" data-type="correct" onclick="handleCardClick(this)">
+                    <div class="card-content">
+                        <span class="emoji">❤️</span>
+                        <h3>Love</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div id="ticket-reveal" class="ticket hidden">
+                <div class="ticket-header">
+                    <span>BOARDING PASS</span>
+                    <span class="airline">StoryAir ❤️</span>
+                </div>
+                <div class="ticket-body">
+                    <div class="ticket-info">
+                        <div class="passenger">
+                            <span class="label">PASSENGER</span>
+                            <span class="value">Guest</span>
+                        </div>
+                        <div class="flight-route">
+                            <span class="code">HOME</span>
+                            <span class="plane">✈️</span>
+                            <span class="code">LOVE</span>
+                        </div>
+                        <div class="destination">
+                            <span class="label">DESTINATION</span>
+                            <span class="value">WEEKEND GETAWAY</span>
+                        </div>
+                        <div class="date-info">
+                            <span class="label">DATE</span>
+                            <span class="value">ANYTIME</span>
+                        </div>
+                    </div>
+                    <div class="ticket-barcode">|||||| ||||| ||||</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Made with ❤️ using this public template</p>
+    </footer>
+
+    <script src="script.js?v=3"></script>
+</body>
+</html>
